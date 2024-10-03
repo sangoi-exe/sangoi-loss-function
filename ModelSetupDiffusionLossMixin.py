@@ -207,7 +207,7 @@ class ModelSetupDiffusionLossMixin(metaclass=ABCMeta):
     to add the function and activate it through the UI.
     """
 
-    def _sangoi_loss_modifier(self, timesteps: Tensor, predicted: Tensor, target: Tensor, gamma: float, device: torch.device) -> Tensor:
+    def __sangoi_loss_modifier(self, timesteps: Tensor, predicted: Tensor, target: Tensor, gamma: float, device: torch.device) -> Tensor:
         """
         Source: https://github.com/sangoi-exe/sangoi-loss-function
         
