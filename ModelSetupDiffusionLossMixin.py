@@ -230,7 +230,7 @@ class ModelSetupDiffusionLossMixin(metaclass=ABCMeta):
         max_snr = 100
 
         # Obtain the SNR for each timestep
-        snr = self._snr(timesteps, device)
+        snr = self.__snr(timesteps, device)
         # Clamp the SNR values to the defined range to avoid extreme values
         snr = torch.clamp(snr, min=min_snr, max=max_snr)
 
